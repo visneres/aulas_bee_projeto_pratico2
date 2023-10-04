@@ -8,7 +8,7 @@ class Pratico2ApplicationTests {
 
 	@Test
 	void contextLoads() {
-		System.out.println("Funcionou..");
+		System.out.println("Funcionou2..");
 	}
 
 }
