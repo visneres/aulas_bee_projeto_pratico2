@@ -1,4 +1,4 @@
-package com.ambev.pratico2.exceptions.rest;
+package com.ambev.pratico2.exceptions;
 
 import com.ambev.pratico2.exceptions.CustomNotFoundException;
 import org.springframework.web.bind.annotation.RestController;

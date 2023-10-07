@@ -6,12 +6,13 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 @ControllerAdvice
-public class CustomException {
+public class ExceptionHandlerController {
 
-    @ExceptionHandler(CustomException.class)
-    public ResponseEntity<String> handlerCustomException(CustomException ex){
+    @ExceptionHandler(CustomNotFoundException.class)
+    public ResponseEntity<String> handlerCustomNotFoundException(CustomNotFoundException ex){
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
     }
+
     @ExceptionHandler(Exception.class)
     public ResponseEntity<String> handlerGenericException(Exception ex){
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());
