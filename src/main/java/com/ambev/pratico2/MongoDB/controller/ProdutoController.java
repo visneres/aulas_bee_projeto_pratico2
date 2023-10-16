@@ -5,7 +5,6 @@ import java.util.List;
 import com.ambev.pratico2.MongoDB.model.Produto;
 import com.ambev.pratico2.MongoDB.service.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -21,13 +20,13 @@ public class ProdutoController {
     }
 
     @PostMapping
-    public Produto create(@RequestBody Produto student) {
-        return this.produtoService.create(student);
+    public Produto create(@RequestBody Produto produto) {
+        return this.produtoService.create(produto);
     }
 
     @PutMapping(value = "/{id}")
-    public Produto update(@PathVariable("id") String id, @RequestBody Produto student) {
-        return this.produtoService.update(id, student);
+    public Produto update(@PathVariable("id") String id, @RequestBody Produto produto) {
+        return this.produtoService.update(id, produto);
     }
 
     @DeleteMapping(value = "/{id}")

@@ -8,16 +8,31 @@ public class Produto {
     @Id
     private String id;
     private String nome;
-    private double valor;
+    private double preco;
+    private String descricao;
 
-    public Produto(){
+   public Produto(){
     }
 
-    public Produto(String id, String nome, double valor){
+    public Produto(String nome, double preco){
+        this.nome = nome;
+        this.preco = preco;
+    }
+
+    public Produto(String nome, double preco, String descricao){
+        this.nome = nome;
+        this.preco = preco;
+        this.descricao = descricao;
+    }
+
+    public Produto(String id, String nome, double preco, String descricao){
         this.id = id;
         this.nome = nome;
-        this.valor = valor;
+        this.preco = preco;
+        this.descricao = descricao;
     }
+
+
 
     public String getId() {
         return id;
@@ -35,11 +50,19 @@ public class Produto {
         this.nome = nome;
     }
 
-    public double getValor() {
-        return valor;
+    public double getPreco() {
+        return preco;
     }
 
-    public void setValor(double valor) {
-        this.valor = valor;
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 }

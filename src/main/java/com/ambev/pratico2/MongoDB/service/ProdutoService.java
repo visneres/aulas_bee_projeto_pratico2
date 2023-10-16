@@ -4,8 +4,6 @@ import java.util.List;
 
 import com.ambev.pratico2.MongoDB.model.Produto;
 import com.ambev.pratico2.MongoDB.repository.ProdutoRepository;
-import org.bson.Document;
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,16 +13,12 @@ public class ProdutoService {
     @Autowired
     private final ProdutoRepository produtoRepository;
 
-
     public ProdutoService(ProdutoRepository produtoRepository){
         this.produtoRepository = produtoRepository;
     }
-    public Produto salvarProduto(Produto produto){
-        return produtoRepository.save(produto);
-    }
 
-    public Produto create(Produto student) {
-        return this.produtoRepository.save(student);
+    public Produto create(Produto produto) {
+        return this.produtoRepository.save(produto);
     }
 
     public List<Produto> getAll() {
@@ -34,7 +28,7 @@ public class ProdutoService {
     public Produto update(String id, Produto produto) {
         Produto updated = this.produtoRepository.findById(id).get();
         updated.setNome(produto.getNome());
-        updated.setValor(produto.getValor());
+        updated.setPreco(produto.getPreco());
 
         return this.produtoRepository.save(updated);
     }

@@ -3,8 +3,8 @@ package com.ambev.pratico2.HerancaPolimorfismo;
 public class Cerveja extends Produto{
     private boolean comAlcool;
 
-    public Cerveja(int id, String descricao, double preco, boolean comAlcool) {
-        super(id, descricao, preco);
+    public Cerveja(int id, String descricao, double preco, boolean comAlcool, String nome) {
+        super(id, descricao, preco, nome);
         this.comAlcool = comAlcool;
     }
 
